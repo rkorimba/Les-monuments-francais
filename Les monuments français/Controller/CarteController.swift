@@ -8,7 +8,6 @@
 
 import UIKit
 import MapKit
-import CoreLocation
 
 class CarteController: UIViewController {
 
@@ -19,7 +18,6 @@ class CarteController: UIViewController {
     var urlString = "https://www.data.gouv.fr/s/resources/monuments-historiques-francais/20150408-163911/monuments.json"
     var locationManager = CLLocationManager()
     var monuments = [Monument]()
-    let codeur = CLGeocoder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,20 +51,14 @@ class CarteController: UIViewController {
                     let titre = monument.name ?? ""
                     let location = CLLocation(latitude: latitude, longitude: longitude)
                     var adresse = ""
-                    codeur.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) in
-                        if let erreur = error {
-                            print("Pas d'adresse -> " + erreur.localizedDescription)
-                        } else if let array = placemarks, array.count > 0 {
-                            let monPositionnement = array.last
-                            let numero = monPositionnement?.subThoroughfare ?? ""
-                            let rue = monPositionnement?.thoroughfare ?? ""
-                            let ville = monPositionnement?.locality ?? ""
-                            adresse = numero + " " + rue + ", " + ville
+                    MonGeocoder.obtenir.adresseDepuis(location, completion: {(adresse, erreur) -> (Void) in
+                        var monAdresse = ""
+                        if adresse != nil {
+                            monAdresse = adresse!
                         }
-                        let monAnnotation = MonAnnotation(title: titre, adresse: adresse, coordonnes: coordonnes)
+                        let monAnnotation = MonAnnotation(title: titre, adresse: monAdresse, coordonnes: coordonnes)
                         self.carte.addAnnotation(monAnnotation)
                     })
-                    
                 }
             }
             let annotation = MKPointAnnotation()
