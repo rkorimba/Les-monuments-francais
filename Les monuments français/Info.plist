@@ -41,5 +41,11 @@
 	</array>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>Localiser l&apos;utilisateur sur la carte</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Test</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Test</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Toujours Test</string>
 </dict>
 </plist>
