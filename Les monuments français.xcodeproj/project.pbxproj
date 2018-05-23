@@ -14,6 +14,7 @@
 		D0934D0120B57155008318FC /* CarteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934D0020B57155008318FC /* CarteController.swift */; };
 		D0934D0320B57653008318FC /* CLLocationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934D0220B57653008318FC /* CLLocationExtension.swift */; };
 		D0934D0520B57D0F008318FC /* Monument.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934D0420B57D0F008318FC /* Monument.swift */; };
+		D0934D0720B58178008318FC /* MonAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934D0620B58178008318FC /* MonAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D0934D0020B57155008318FC /* CarteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteController.swift; sourceTree = "<group>"; };
 		D0934D0220B57653008318FC /* CLLocationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationExtension.swift; sourceTree = "<group>"; };
 		D0934D0420B57D0F008318FC /* Monument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monument.swift; sourceTree = "<group>"; };
+		D0934D0620B58178008318FC /* MonAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D0934D0420B57D0F008318FC /* Monument.swift */,
+				D0934D0620B58178008318FC /* MonAnnotation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				D0934D0520B57D0F008318FC /* Monument.swift in Sources */,
 				D0934CEC20B57101008318FC /* AppDelegate.swift in Sources */,
 				D0934D0320B57653008318FC /* CLLocationExtension.swift in Sources */,
+				D0934D0720B58178008318FC /* MonAnnotation.swift in Sources */,
 				D0934D0120B57155008318FC /* CarteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
