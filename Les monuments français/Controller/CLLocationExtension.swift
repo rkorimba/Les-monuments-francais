@@ -33,5 +33,4 @@ extension CarteController: CLLocationManagerDelegate {
         print(error.localizedDescription)
     }
     
-    
 }

@@ -15,14 +15,33 @@ class CarteController: UIViewController {
     @IBOutlet weak var maPositionBouton: UIButton!
     @IBOutlet weak var segment: UISegmentedControl!
     
+    var urlString = "https://www.data.gouv.fr/s/resources/monuments-historiques-francais/20150408-163911/monuments.json"
     var locationManager = CLLocationManager()
+    var monuments = [Monument]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         carte.showsUserLocation = true
         miseEnPlace()
+        obtenirDonneesDepuisJSON()
     }
    
+    func obtenirDonneesDepuisJSON() {
+        
+        guard let url = URL(string: urlString) else { return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard data != nil else { return }
+            do {
+                self.monuments = try JSONDecoder().decode([Monument].self, from: data!)
+                for monument in self.monuments {
+                    print(monument.name)
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }.resume()
+    }
+    
     @IBAction func meLocaliser(_ sender: Any) {
     
         locationManager.requestAlwaysAuthorization()
