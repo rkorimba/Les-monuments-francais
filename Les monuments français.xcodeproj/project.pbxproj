@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		D0934CEC20B57101008318FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934CEB20B57101008318FC /* AppDelegate.swift */; };
-		D0934CEE20B57101008318FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934CED20B57101008318FC /* ViewController.swift */; };
 		D0934CF120B57101008318FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0934CEF20B57101008318FC /* Main.storyboard */; };
 		D0934CF320B57104008318FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0934CF220B57104008318FC /* Assets.xcassets */; };
 		D0934CF620B57104008318FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0934CF420B57104008318FC /* LaunchScreen.storyboard */; };
+		D0934D0120B57155008318FC /* CarteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0934D0020B57155008318FC /* CarteController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D0934CE820B57101008318FC /* Les monuments français.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Les monuments français.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0934CEB20B57101008318FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D0934CED20B57101008318FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0934CF020B57101008318FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0934CF220B57104008318FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0934CF520B57104008318FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0934CF720B57104008318FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0934D0020B57155008318FC /* CarteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarteController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +54,38 @@
 		D0934CEA20B57101008318FC /* Les monuments français */ = {
 			isa = PBXGroup;
 			children = (
+				D0934CFF20B57122008318FC /* Model */,
+				D0934CFE20B5711B008318FC /* View */,
+				D0934CFD20B57114008318FC /* Controller */,
 				D0934CEB20B57101008318FC /* AppDelegate.swift */,
-				D0934CED20B57101008318FC /* ViewController.swift */,
 				D0934CEF20B57101008318FC /* Main.storyboard */,
 				D0934CF220B57104008318FC /* Assets.xcassets */,
 				D0934CF420B57104008318FC /* LaunchScreen.storyboard */,
 				D0934CF720B57104008318FC /* Info.plist */,
 			);
 			path = "Les monuments français";
+			sourceTree = "<group>";
+		};
+		D0934CFD20B57114008318FC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D0934D0020B57155008318FC /* CarteController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		D0934CFE20B5711B008318FC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0934CFF20B57122008318FC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0934CEE20B57101008318FC /* ViewController.swift in Sources */,
 				D0934CEC20B57101008318FC /* AppDelegate.swift in Sources */,
+				D0934D0120B57155008318FC /* CarteController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
